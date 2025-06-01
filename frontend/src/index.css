@@ -1,106 +1,162 @@
-*,
-*::before,
-*::after {
-  box-sizing: inherit;}
-html {
-  box-sizing: border-box;
-}
+/* ...existing code... */
+
+/* General improvements */
 body {
-  font-family: Arial, sans-serif;
-  position: relative;
-  font-size: medium;
+  background: #fafbfc;
+  color: #222;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
-button{
-  border-radius: 10%;
-  padding: 3% 5%;
-  font-weight: 900;
-  font-size: large;
+
+/* Buttons */
+button {
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-weight: 700;
+  font-size: 1rem;
+  background: linear-gradient(0, #ff5858 0%, #f09819 100%);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 1s, transform 0.3s;
 }
-button:hover{
-  background-color: blue;
-  transition: 1s;
+button:hover {
+  background: linear-gradient(100deg, #f09819 0%, #ff5858 100%);
+  transform: translateY(-2px)  scale(1.03);
 }
+
+/* Navbar */
 .navbar {
-  background-color: red;
-  padding: 2%;
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-}
-.menu {
-  display: none;
-}
-@media screen {
-  .menu {
-  }
+  background: linear-gradient(90deg, #ff5858 0%, #f09819 100%);
+  padding: 1.2rem 2rem;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
 }
 .Navigations a {
-  border: none;
-  margin: 8%;
+  margin: 0 1.5rem;
   text-decoration: none;
-  background-color: red;
+  color: #fff;
+  font-weight: 600;
+  background: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
 }
+.Navigations a:hover {
+  background: rgba(255,255,255,0.15);
+  color: #222;
+}
+
+/* Hero section */
 .hero {
-  background-color: #f2f2f2;
+  background: linear-gradient(120deg, #f2f2f2 60%, #f09819 100%);
   background-image: url(/images/men-wears-logo.png);
-  background-size: 50% 70%;
+  background-size: 40% 60%;
   background-repeat: no-repeat;
-  height: 100%;
-  height: 50vh;
   background-position: left;
+  min-height: 50vh;
   position: relative;
-}
-.abouthero{
-  align-items: center;
-  display: flex;
-  justify-content:end;
-  text-align: justify;
-  margin : 0 20%;
-}
-hero::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
 }
 .hero-content {
+  background: rgba(255,255,255,0.85);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 2rem;
+  width: 45%;
   position: absolute;
+  top: 15%;
+  left: 48%;
+  transform: translate(-50%, 0);
   text-align: center;
-  align-items: center;
-  padding: 1%;
-  width: 25%;
-  top: 10%;
-  left: 45%;
-  width: 50%;
-  background-color: transparent;
 }
-.hero-content p h1 button {
-  padding: 100px;
-  margin-top: 100px;
-}
-.cards {
-  background-color: #12bb37;
-  display: grid;
-  margin: 10px;
-  flex-direction: row;
-    color: red;
 
+/* Cards */
+.cards {
+  background: #fff;
+  display: flex;
+  gap: 2rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  color: #222;
+  max-width: 1200px;
 }
-.card{
+.card {
+  flex: 1;
+  background: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+  padding: 1.5rem;
   text-align: center;
-  align-items: center;
+  transition: box-shadow 0.2s;
 }
+.card:hover {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+
+/* Blog cards */
 .blogcards {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
 }
+.blogcards > * {
+  flex: 1 1 30%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
 .footer {
-  background-color: #f2f2f2;
-  padding: 20px;
+  background: #222;
+  color: #fff;
+  padding: 2rem 0;
   text-align: center;
+  border-radius: 18px 18px 0 0;
+  margin-top: 3rem;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.06);
+}
+
+/* Service highlights */
+.delivery, .refund {
+  background: linear-gradient(90deg, #ff5858 0%, #f09819 100%);
+  color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  font-weight: 600;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+}
+.customer-care {
+  background: linear-gradient(90deg, #3741b4 0%, #6a82fb 100%);
+  color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  font-weight: 600;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .cards, .blogcards {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .hero-content {
+    width: 90%;
+    left: 50%;
+    padding: 1rem;
+  }
 }
