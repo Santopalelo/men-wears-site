@@ -37,14 +37,14 @@ button:hover {
   margin: 0 1.5rem;
   text-decoration: none;
   color: #fff;
-  font-weight: 600;
+  font-weight: 700;
   background: transparent;
   padding: 0.5rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
 }
 .Navigations a:hover {
-  background: rgba(255,255,255,0.15);
+  background-color: #fafbfc;
   color: #222;
 }
 
