@@ -10,7 +10,7 @@ const nav = () => {
             <nav className='navbar'>
                 <div className='menu'><MdMenu size={20}/></div>
                 <div className='logo'>PALELO</div>
-                <div className='Navigations'>
+                <div className='nav-links'>
                 <a href="">home</a>
                 <a href="">home</a>
                 <a href="">home</a>
