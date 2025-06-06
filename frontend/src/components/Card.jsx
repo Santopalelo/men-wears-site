@@ -3,8 +3,12 @@ import React from 'react'
 
 const Card = () => {
   return (
-    <div className='cards'>
-      <p className='card'>card1</p>
+    <div className='card'>
+      <div><img src="/images/belts.png" alt="belt" /></div>
+      <div className='card-info'>
+        <h2>Belts</h2>
+        <p>₦ 2,000</p>
+      </div>
     </div>
   )
 }

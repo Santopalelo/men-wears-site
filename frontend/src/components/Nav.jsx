@@ -1,13 +1,15 @@
 import React from 'react'
 import App from '../App'
+import { MdMenu } from "react-icons/md";
+import { FaSearch } from "react-icons/fa";
 
 const nav = () => {
     return (
         <div>
 
             <nav className='navbar'>
-                <div className='menu'>menu bar</div>
-                <div>PALELO</div>
+                <div className='menu'><MdMenu size={20}/></div>
+                <div className='logo'>PALELO</div>
                 <div className='Navigations'>
                 <a href="">home</a>
                 <a href="">home</a>
@@ -15,7 +17,7 @@ const nav = () => {
                 <a href="">home</a>
                 <a href="">home</a>
                 </div>
-                <div>Search bar</div>
+                <div className='search'><FaSearch size={20}/></div>
             </nav>
         </div>
   )

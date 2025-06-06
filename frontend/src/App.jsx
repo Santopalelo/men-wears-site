@@ -1,7 +1,7 @@
 import React from 'react'
 import Nav from './components/nav.jsx'
 import Hero from './components/hero.jsx'
-import Products from './components/Products.jsx'
+import Product from './components/Product.jsx'
 import Blog from './components/Blog.jsx'
 import Abouthero from './components/abouthero.jsx'
 import Footer from './components/footer.jsx'
@@ -14,7 +14,7 @@ const App = () => {
       <Nav/>
       <Hero/>
       <Abouthero/>
-      <Products/>
+      <Product/>
       <Blog/>
       <Footer/>
     <Example Name = 'Onwe Somto Lawrence' Age= {35} />
