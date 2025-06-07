@@ -6,10 +6,9 @@ const Blog = () => {
     <div className='blog-container'>
       <h1>Our blog post</h1>
       <div className='blogcards'>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
+      <Card image="/images/blacksuit.webp" title="suit"  />
+      <Card image="/images/ash-suit.webp" title="suit"  />
+      <Card image="/images/men-suit.webp" title="suit"  />
       </div>
       
       <div/>

@@ -1,8 +1,10 @@
 import React from 'react'
 
-const Example = (props) => {
+const Example = ({Name, Age}) => {
   return (
     <div>
+      <h1>Name: {Name}</h1>
+      <p>Age: {Age}</p>
     </div>
   )
 }

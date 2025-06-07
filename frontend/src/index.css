@@ -21,6 +21,7 @@ a:hover {
   background: #fff;
   padding: 0.5rem 2rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #eee;
@@ -62,7 +63,7 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   padding: 4rem 2rem 2rem 2rem;
-  background: #fafbfc;
+  background: #f09819;
   min-height: 400px;
 }
 
@@ -93,7 +94,9 @@ a:hover {
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #666;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .hero-content button {
@@ -112,6 +115,7 @@ a:hover {
 
 .abouthero {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
   gap: 4rem;
@@ -138,35 +142,24 @@ a:hover {
   font-weight: 500;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 3rem 0 1rem 0;
-  letter-spacing: 1px;
+.product {
+  padding: 2rem 0;
+  background: #f09819;
 }
 
-/*.section-subtitle {
-  text-align: center;
-  color: #888;
-  margin-bottom: 2rem;
-  font-size: 1rem;
-}*/
 .product h1,.product h2{
   text-align: center;
 }
 .product-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto 3rem auto;
-  padding: 0 2rem;
 }
 
 .card {
   background: #fff;
-  border-radius: 102px;
+  border-radius: 10px;
   box-shadow: 0 1px 8px rgba(0,0,0,0.06);
   padding: 1.5rem 1rem;
   text-align: center;
@@ -227,4 +220,17 @@ a:hover {
   background: #222;
   color: #fff;
   padding: 1rem 0;
+}
+
+@media (max-width:  800px) {
+  .nav-links a{
+    display: none;
+  }
+   .menu {
+    display: block;
+  }
+  .logo {
+    font-size: 1.2rem;
+  }
+  
 }

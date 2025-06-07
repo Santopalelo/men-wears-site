@@ -1,13 +1,13 @@
 import React from 'react'
 
 
-const Card = () => {
+const Card = ({ title, price, image }) => {
   return (
     <div className='card'>
-      <div><img src="/images/belts.png" alt="belt" /></div>
+      <div className='image'><img src={image} alt={title} /></div>
       <div className='card-info'>
-        <h2>Belts</h2>
-        <p>₦ 2,000</p>
+        <h2>{title}</h2>
+        <p>{price}</p>
       </div>
     </div>
   )

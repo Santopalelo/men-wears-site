@@ -52,7 +52,7 @@ button:hover {
 .menu {
   display: none; /* Hide by default */
 }
-.Navigations a {
+Navigations a {
   margin: 0 1.5rem;
   text-decoration: none;
   color: #fff;
@@ -136,10 +136,12 @@ button:hover {
   color: #222;
 }
 .product-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  grid-template-rows: repeat(3, auto);   /* 3 rows */
-  gap: 1.5rem;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  /*grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  /*grid-template-rows: repeat(3, auto);   /* 3 rows */
+  /*gap: 1.5rem;
   margin-top: 2rem;
   justify-items: center; /* Optional: center cards horizontally */
 }
