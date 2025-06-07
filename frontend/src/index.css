@@ -222,7 +222,7 @@ a:hover {
   padding: 1rem 0;
 }
 
-@media (max-width:  800px) {
+@media (max-width  800px) {
   .nav-links a{
     display: none;
   }
@@ -231,6 +231,7 @@ a:hover {
   }
   .logo {
     font-size: 1.2rem;
+    padding: 0.5rem 0;
   }
   
 }
