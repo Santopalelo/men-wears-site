@@ -9,6 +9,7 @@ import Example from './components/Example.jsx'
 
 
 const App = () => {
+  
   return (
     <div className='App'>
       <Nav/>
