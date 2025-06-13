@@ -1,17 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import App from '../App'
 import { MdMenu } from "react-icons/md";
 import { FaSearch } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
+
 
 const nav = () => {
+    const [showSidebar, setshowSidebar] = useState(false);
+   
     return (
         <div>
 
-            <nav className='navbar'>
-                <div className='menu'><MdMenu size={20}/></div>
+            <nav  className='navbar'>
+                <button id='openSidebar' className='menu' onClick={() => setshowSidebar(true)}><MdMenu size={20}/></button>
                 <div className='logo'>PALELO</div>
-                <div className='nav-links'>
-                <a href="">home</a>
+                <div id='navLinks' className='nav-links' style={{display: showSidebar ? 'flex' : 'none'}}>
+                <button id='closeSidebar' className='close' onClick={() => setshowSidebar(false)}><IoClose size={40}/></button>
                 <a href="">home</a>
                 <a href="">home</a>
                 <a href="">home</a>

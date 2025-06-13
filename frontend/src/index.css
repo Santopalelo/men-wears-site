@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 body {
   background: #fff;
   color: #222;
@@ -31,6 +35,9 @@ a:hover {
   z-index: 1000;
 }
 
+.close {
+  display: none;
+}
 .menu {
   display: none;
 }
@@ -43,21 +50,20 @@ a:hover {
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  position: relative;
 }
 
 .nav-links a {
   font-size: 1rem;
   font-weight: 500;
   color: #222;
-  background-color: red;
-  padding: 0.5rem 0;
-  border-bottom: 2px solid transparent;
+  padding: 0 0.5rem;
 }
 
 .nav-links a:hover {
   border-bottom: 2px solid #f09819;
-  color: #f09819;
+  transition: 10s;
+  background-color: red;
 }
 
 .hero {
@@ -68,6 +74,8 @@ a:hover {
   background: #f09819;
   min-height: 400px;
 }
+
+
 
 .hero-image {
   flex: 1;
@@ -162,7 +170,7 @@ a:hover {
 .card {
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+  box-shadow: 5px 5px 8px rgba(0,0,0,0.06);
   padding: 1.5rem 1rem;
   text-align: center;
   transition: box-shadow 0.2s;
@@ -226,7 +234,7 @@ a:hover {
 
 @media (max-width: 800px) {
   .nav-links {
-    display: flex;
+    display: none;
     flex-direction: column;
     position: fixed;
     top: 0%;
@@ -239,9 +247,22 @@ a:hover {
     align-content: center;
     justify-content: flex-start;
   }
+  .av-links .show  {
+    left: 0;
+  }
   
   .nav-links a {
     width: 100%;
+    padding: 2% 40%;
+  }
+  .close {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 80%;
+    cursor: pointer;
+    padding: 0;
+    align-content: flex-start;
   }
 
    .menu {
