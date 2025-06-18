@@ -43,6 +43,7 @@ a:hover {
 }
 
 .logo {
+  cursor: pointer;
   font-weight: bold;
   font-size: 2rem;
   letter-spacing: 1px;
@@ -75,7 +76,27 @@ a:hover {
   min-height: 400px;
 }
 
+.searchBox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  gap: 5%;
+}
 
+#search {
+  border-radius: 15px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  position: relative;
+  width: 50%;
+  max-width: 70%;
+}
+
+.cartIcon{
+  margin-left: 1rem;
+}
 
 .hero-image {
   flex: 1;
@@ -117,9 +138,9 @@ a:hover {
   border-radius: 6px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.2s;
 }
 .hero-content button:hover {
+  transform: scale(1.5);
   background: #f09819;
 }
 
@@ -186,7 +207,7 @@ a:hover {
   width: 100%;
   max-width: 500px;
   height: 250px;
-  object-fit: contain;
+  object-fit: cover;
   margin-bottom: 1rem;
   border-radius: 8px;
   background: #fafbfc;
@@ -215,14 +236,22 @@ a:hover {
 }
 .blogcards {
   display: flex;
-  gap: 2rem;
-  justify-content: center;
-  margin: 2rem auto;
-  max-width: 1200px;
-  padding: 0 2rem;
   flex-wrap: wrap;
-  border-radius: 30%;
+  justify-content: space-evenly;
+  gap: 2rem;
 }
+
+.blogInfo{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 8px rgba(0,0,0,0.06);
+  padding: 1.5rem;
+  text-align: center;
+  transition: box-shadow 0.2s;
+  width: 100%;
+  max-width: 300px;
+}
+
 .footer-container{
   display: flex;
   justify-content: center;
