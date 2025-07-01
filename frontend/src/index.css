@@ -31,7 +31,7 @@ a:hover {
   justify-content: space-between;
   border-bottom: 1px solid #eee;
   position: sticky;
-  top: 0;
+  top: 100px;
   z-index: 1000;
 }
 

@@ -6,6 +6,7 @@ import Blog from './components/Blog.jsx'
 import Abouthero from './components/abouthero.jsx'
 import Footer from './components/footer.jsx'
 import Example from './components/Example.jsx'
+import Service from './components/Service.jsx'
 
 
 const App = () => {
@@ -17,8 +18,9 @@ const App = () => {
       <Abouthero/>
       <Product/>
       <Blog/>
-      <Footer/>
-    <Example Name = 'Onwe Somto Lawrence' Age= {35} />
+      <Service/>
+     // <Footer/>
+    //<Example Name = 'Onwe Somto Lawrence' Age= {35} />
     </div>
   )
 }
