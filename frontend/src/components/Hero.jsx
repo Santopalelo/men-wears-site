@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from "./Button"
 
 
 const hero = () => {
@@ -7,12 +8,12 @@ const hero = () => {
       <div className = "hero-content">
          <div className="searchBox">
         <input id='search' type="text" placeholder="Search for products..." />
-        <button className='searchButton'>Search</button>
+        <Button btnName = "Search"/>
       </div>
       <p>Palelo</p>
       <h1>Male Clothes</h1>
       <p>everyone has a style</p>
-      <button className='shopNowButton'>Shop Now</button>
+      <Button btnName = "Shop Now"/>
       </div>
     </div>
   )

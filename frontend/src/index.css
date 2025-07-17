@@ -1,11 +1,11 @@
-*{
+* {
   box-sizing: border-box;
 }
 
 body {
   background: #fff;
   color: #222;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -63,7 +63,7 @@ a:hover {
 
 .nav-links a:hover {
   border-bottom: 2px solid #f09819;
-  transition: 10s;
+  transition: 1s;
   background-color: red;
 }
 
@@ -76,7 +76,7 @@ a:hover {
   min-height: 400px;
 }
 
-.searchBox{
+.searchBox {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,7 +94,7 @@ a:hover {
   max-width: 70%;
 }
 
-.cartIcon{
+.cartIcon {
   margin-left: 1rem;
 }
 
@@ -178,29 +178,34 @@ a:hover {
   background: #f09819;
 }
 
-.product h1,.product h2{
+.product h1,
+.product h2 {
   text-align: center;
 }
 .product-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .card {
   background: #fff;
+
   border-radius: 10px;
-  box-shadow: 5px 5px 8px rgba(0,0,0,0.06);
   padding: 1.5rem 1rem;
+
   text-align: center;
-  transition: box-shadow 0.2s;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   max-width: 300px;
   position: relative;
+}
+.card:hover {
+  transition: box-shadow 0.1s;
+  box-shadow: 0px 0px 22px 
 }
 
 .card img {
@@ -237,22 +242,26 @@ a:hover {
 .blogcards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin: 5rem
   gap: 2rem;
 }
 
-.blogInfo{
+.blogInfo {
   background: #fff;
   border-radius: 10px;
-  box-shadow: 5px 5px 8px rgba(0,0,0,0.06);
   padding: 1.5rem;
   text-align: center;
-  transition: box-shadow 0.2s;
   width: 100%;
   max-width: 300px;
+  transition: box-shadow 0.1s;
+}
+.blogInfo:hover{
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.06);
+
 }
 
-.footer-container{
+.footer-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -276,13 +285,11 @@ a:hover {
     align-content: center;
     justify-content: flex-start;
   }
-  .av-links .show  {
-    left: 0;
-  }
-  
+
   .nav-links a {
     width: 100%;
-    padding: 2% 40%;
+    padding: 10% 35%;
+    margin: 1rem;
   }
   .close {
     display: block;
@@ -294,11 +301,10 @@ a:hover {
     align-content: flex-start;
   }
 
-   .menu {
+  .menu {
     display: block;
   }
   .logo {
     font-size: 1.2rem;
   }
-  
 }
