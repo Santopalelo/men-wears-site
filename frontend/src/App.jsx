@@ -7,6 +7,7 @@ import Abouthero from "./components/abouthero.jsx";
 import Footer from "./components/footer.jsx";
 import Service from "./components/Service.jsx";
 import Home from "./pages/home.jsx";
+import Popup from "./components/Popup.jsx";
 import Cart from "./pages/Cart.jsx";
 import Login from "./pages/login.jsx";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
@@ -29,6 +30,7 @@ const App = () => {
                 <Blog />
                 <Service />
                 <Footer />
+                <Popup />
               </>
             }
           />
