@@ -1,7 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: #fff;
   color: #222;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -27,15 +31,19 @@ a:hover {
   justify-content: space-between;
   border-bottom: 1px solid #eee;
   position: sticky;
-  top: 0;
+  top: 100px;
   z-index: 1000;
 }
 
+.close {
+  display: none;
+}
 .menu {
   display: none;
 }
 
 .logo {
+  cursor: pointer;
   font-weight: bold;
   font-size: 2rem;
   letter-spacing: 1px;
@@ -43,21 +51,20 @@ a:hover {
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  position: relative;
 }
 
 .nav-links a {
   font-size: 1rem;
   font-weight: 500;
   color: #222;
-  background-color: red;
-  padding: 0.5rem 0;
-  border-bottom: 2px solid transparent;
+  padding: 0 0.5rem;
 }
 
 .nav-links a:hover {
   border-bottom: 2px solid #f09819;
-  color: #f09819;
+  transition: 1s;
+  background-color: red;
 }
 
 .hero {
@@ -67,6 +74,28 @@ a:hover {
   padding: 4rem 2rem 2rem 2rem;
   background: #f09819;
   min-height: 400px;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  gap: 5%;
+}
+
+#search {
+  border-radius: 15px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  position: relative;
+  width: 50%;
+  max-width: 70%;
+}
+
+.cartIcon {
+  margin-left: 1rem;
 }
 
 .hero-image {
@@ -94,7 +123,6 @@ a:hover {
 }
 
 .hero-content p {
-  font-size: 1.2rem;
   margin-bottom: 2rem;
   color: black;
   font-size: 1.5rem;
@@ -109,9 +137,9 @@ a:hover {
   border-radius: 6px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.2s;
 }
 .hero-content button:hover {
+  transform: scale(1.5);
   background: #f09819;
 }
 
@@ -149,23 +177,24 @@ a:hover {
   background: #f09819;
 }
 
-.product h1,.product h2{
+.product h1,
+.product h2 {
   text-align: center;
 }
 .product-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .card {
   background: #fff;
+
   border-radius: 10px;
-  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
   padding: 1.5rem 1rem;
+
   text-align: center;
-  transition: box-shadow 0.2s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -173,12 +202,16 @@ a:hover {
   max-width: 300px;
   position: relative;
 }
+.card:hover {
+  transition: box-shadow 0.1s;
+  box-shadow: 0px 0px 22px 
+}
 
 .card img {
   width: 100%;
   max-width: 500px;
   height: 250px;
-  object-fit: contain;
+  object-fit: cover;
   margin-bottom: 1rem;
   border-radius: 8px;
   background: #fafbfc;
@@ -207,15 +240,27 @@ a:hover {
 }
 .blogcards {
   display: flex;
-  gap: 2rem;
-  justify-content: center;
-  margin: 2rem auto;
-  max-width: 1200px;
-  padding: 0 2rem;
   flex-wrap: wrap;
-  border-radius: 30%;
+  justify-content: space-between;
+  margin: 5rem;
+  gap: 2rem;
 }
-.footer-container{
+
+.blogInfo {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  transition: box-shadow 0.1s;
+}
+.blogInfo:hover{
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.06);
+
+}
+
+.footer-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -223,10 +268,21 @@ a:hover {
   color: #fff;
   padding: 1rem 0;
 }
+.popup{
+    position: fixed;
+    top: 45%;
+    left: 45%;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+  }
 
 @media (max-width: 800px) {
   .nav-links {
-    display: flex;
+    display: none;
     flex-direction: column;
     position: fixed;
     top: 0%;
@@ -239,12 +295,24 @@ a:hover {
     align-content: center;
     justify-content: flex-start;
   }
-  
+
   .nav-links a {
     width: 100%;
+    padding: 10% 35%;
+    margin: 1rem;
+  }
+  .close {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 80%;
+    cursor: pointer;
+    padding: 0;
+    align-content: flex-start;
+    padding-left: 10px;
   }
 
-   .menu {
+  .menu {
     display: block;
   }
   .logo {
